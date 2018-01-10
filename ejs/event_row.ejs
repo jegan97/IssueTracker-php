@@ -1,0 +1,39 @@
+
+<%
+if(events.length > 0){
+for(var i = 0;i < events.length;i++){
+
+    var color = getColorCode(events[i].status_code);
+%>
+
+<li class="waves-effect event" id="<%=idprefix+''+events[i].eventid%>" onclick="showEvent('<%=idprefix%>',<%=i%>)">
+    <div class="row">
+        <div class="col l1 m1">
+            <div class="box <%= color %>"></div>
+        </div>
+        <div class="col l8 m8 ">
+            <b class="wrap-text"><%= events[i].name %></b>
+            <br>
+            <span class="wrap-text truncate"><%= events[i].description %></span>
+        </div>
+        <div class="col l3 m3 right-align">
+            <span class="wrap-text ">
+                <%= new Date(events[i].start_date).toDateString() %>
+                <br>
+                Due on <b><%= new Date(events[i].due_date).toDateString() %></b>
+            </span>
+        </div>
+    </div>
+</li>
+
+<%
+
+    }
+}
+else{%>
+
+    <li class="section center-align" ><b>No results</b></li>
+
+<%
+}
+%>

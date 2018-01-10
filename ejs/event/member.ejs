@@ -1,0 +1,43 @@
+<!--
+JSON FORMAT:
+{
+    "members":[
+        {
+        "userid":int,
+        "username":varchar,
+        "position":varchar,
+        "department":varchar,
+        }
+        ],
+    "owner":bool,
+    "ownerid":int
+}
+
+-->
+
+<% for(var i=0;i<members.length;i++){ %>
+    <li>
+        <div class="row">
+            <div class="col l7 m7 wrap-text">
+                <div class="row">
+                    <div class="col l3 m3">
+                        <i class="fa fa-user-circle-o fa-3x grey-text text-lighten-2"></i>
+                    </div>
+                    <div class="col l9 m9">
+                        <b><%=members[i].username%></b>
+                        <br>
+                        <span><%=members[i].department_name%></span>
+                        <br>
+                        <span><%=members[i].position%></span>
+                    </div>
+                </div>
+            </div>
+            <% if( edit ==true){%>
+            <div class="col l5 m5 center">
+                <div class="btn" onclick="ping(members[i].userid,ownerid)">ping <i class="fa fa-bell-o"></i></div>
+            </div>
+            <%}%>
+        </div>
+
+    </li>
+<%}%>

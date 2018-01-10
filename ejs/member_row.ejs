@@ -1,0 +1,29 @@
+<%
+if(members.length > 0){
+
+for(var i = 0;i < members.length;i++){ %>
+
+<li id="<%= members[i].userid %>" onclick="selectedMember(this)">
+    <div class="row">
+        <div class="col l3 m3">
+            <span class="icon"><%= members[i].department %></span>
+        </div>
+        <div class="col l9 m9">
+            <b><%= members[i].username %></b>
+            <br>
+            <span><%= members[i].position %></span>
+            <br>
+            <span><%= members[i].department %></span>
+        </div>
+    </div>
+</li>
+
+<% }
+}
+else{ %>
+
+    <li><b>No results</b></li>
+
+<%
+    }
+%>

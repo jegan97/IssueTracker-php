@@ -1,0 +1,183 @@
+#mainpane{
+
+}
+
+.tabcontainer{
+    background-color: #2C71EA;
+}
+
+.tabs .indicator
+{
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: #f87600;
+    will-change: left, right;
+
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.tabs .tab a{
+    color: rgba(255, 255, 255, 0.62);
+}
+
+/*events*/
+
+#events{
+
+}
+
+[type="checkbox"].filled-in:checked + label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f88e28;
+    background-color: #f88e28;
+    z-index: 0;
+}
+
+#search,#isearch{
+    border-bottom: 1px solid #BBDEFB;
+    box-shadow: 0 1px 0 0 #BBDEFB;
+}
+
+#search:focus,#isearch:focus{
+    border-bottom: 1px solid #1e1bfb;
+    box-shadow: 0 1px 0 0 #1e1bfb;
+}
+
+
+.box{
+    height: 8%;
+    width: 7px;
+}
+
+.event{
+    width: 100%;
+    cursor: pointer;
+    cursor: hand;
+    padding: 1%;
+    margin-bottom: 1%;
+    background-color: #f9f9f9;
+}
+
+.next{
+    text-align: right;
+    cursor: hand;
+    color: rgba(128, 78, 71, 0.71);
+    font-size:large;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition:all 0.3s ease;
+    transition: all 0.3s;
+}
+
+.next:hover{
+    text-align: right;
+    cursor: hand;
+    cursor: pointer;
+    color: #804e47;
+    font-size:large;
+}
+
+/*new*/
+#new{
+    background: whitesmoke;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+}
+
+.dropdowncontainer {
+    position: relative;
+    display: inline-block;
+}
+
+#memlist_holder{
+    position: absolute;
+    top:60%;
+    left:7%;
+    z-index: 99;
+    min-width: 40%;
+}
+
+#memlist{
+    max-height: 250px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    background-color: #ffffff;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#memlist li{
+    cursor: pointer;
+    cursor: hand;
+    padding: 10%;
+    margin-bottom: 2%;
+    background-color: #ffffff;
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#memlist li:hover{
+    background-color: #9fc6ff;
+}
+
+#memlist li .icon{
+    margin-top: 20%;
+    background-color: #0D47A1;
+    color: white;
+    font-size: larger;
+    padding: 40%;
+    border-radius: 20%
+}
+
+.hide {display:none;}
+
+#chipholder{
+    min-width: 50%;
+    min-height: 50%;
+    background-color: white;
+    -webkit-box-shadow: inset -1px 0px 5px 1px rgba(20,20,20,0.44);
+    -moz-box-shadow: inset -1px 0px 5px 1px rgba(20,20,20,0.44);
+    box-shadow: inset -1px 0px 5px 1px rgba(20,20,20,0.44);
+}
+
+#chipholder .tags{
+    padding: 3%;
+}
+
+#chipholder .tags .tag{
+    padding: 2% 3%;
+    background-color: #ff514f;
+    color: white;
+    margin: 2%;
+    display: inline-block;
+}
+
+#chipholder .tags .tag .fa-close{
+    cursor: pointer;
+    cursor:hand;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#chipholder .tags .tag .fa-close:hover{
+    cursor: pointer;
+    cursor:hand;
+    color: #000000;
+}
+#create{
+    min-width: 100%;
+}

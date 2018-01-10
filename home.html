@@ -1,0 +1,362 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>Home</title>-->
+
+<!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+<!--<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+<!--<link rel="stylesheet" type="text/css" href="css/home.css">-->
+<!--<link rel="stylesheet" type="text/css" href="css/loader.css">-->
+
+<!--</head>-->
+<!--<body>-->
+
+<div class="row grey lighten-4" id="mainpane">
+
+    <div class="col s12 tabcontainer">
+        <ul class="tabs tabcontainer">
+            <li class="tab col s4  "><a href="#mycards" class="waves-effect">My Meetings</a></li>
+            <li class="tab col s4 "><a href="#icards" class="waves-effect">All Meetings</a></li>
+            <li class="tab col s4 "><a href="#new" class="waves-effect">Create New Meeting</a></li>
+        </ul>
+    </div>
+
+    <div id="mycards" class="col s12">
+
+        <div class="row">
+
+            <div class="col l2 m2 card">
+                <br>
+                <b>Filters</b>
+
+                <div class="line"></div>
+                <br>
+
+                <b>By Date</b>
+                <br>
+                <input type="date" id="start" name="start_date" placeholder="From" class="datepicker">
+                <br>
+                <input type="date" id="end" name="start_date" placeholder="To" class="datepicker">
+                <br>
+
+                <div class="btn blue darken-2 waves-effect waves-light " id="ok">ok</div>
+
+                <div class="line"></div>
+                <br>
+                <b>By Status</b>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked"/>
+                    <label for="filled-in-box">In Progress</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="completed" checked="checked"/>
+                    <label for="completed">Completed</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="fill" checked="checked"/>
+                    <label for="fill">Filled in</label>
+                </p>
+
+                <div class="line"></div>
+                <br>
+                <b>By Department</b>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="imech" checked="checked"/>
+                    <label for="imech">Mechanical</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="iece" checked="checked"/>
+                    <label for="iece">ECE</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="iit" checked="checked"/>
+                    <label for="iit">IT</label>
+                </p>
+
+
+            </div>
+
+            <div class="col l10 m10 card">
+
+                <div class="row">
+                    <br>
+
+                    <div class="col right">
+                        <div class="btn waves-effect waves-light blue darken-2" id="search-btn"><i class="fa fa-search"></i></div>
+                    </div>
+                    <div class="col right">
+                        <input type="text" name="search" id="search" placeholder="Search Meeting.."/>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col right">
+                        <p class="center next" id="next">
+                            Next <i class="fa fa-angle-right"></i>
+                        </p>
+                    </div>
+
+                    <div class="col right">
+                        <p class="center next" id="back">
+                            <i class="fa fa-angle-left"></i> Back
+                        </p>
+                    </div>
+                </div>
+
+                <div id="events_container">
+
+                    <ul id="events">
+
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="icards" class="col s12">
+
+
+        <div class="row">
+
+            <div class="col l2 m2 card">
+                <br>
+                <b>Filters</b>
+
+                <div class="line"></div>
+                <br>
+
+                <b>By Date</b>
+                <br>
+                <input type="date" id="istart" name="start_date" placeholder="From" class="datepicker">
+                <br>
+                <input type="date" id="iend" name="start_date" placeholder="To" class="datepicker">
+                <br>
+
+                <div class="btn blue darken-2 waves-effect waves-light " id="iok">ok</div>
+
+                <div class="line"></div>
+                <br>
+                <b>By Status</b>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="iprogress" checked="checked"/>
+                    <label for="filled-in-box">In Progress</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="icompleted" checked="checked"/>
+                    <label for="completed">Completed</label>
+                </p>
+
+                <b>By Department</b>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="mech" checked="checked"/>
+                    <label for="mech">Mechanical</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="ece" checked="checked"/>
+                    <label for="ece">ECE</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" class="filled-in" id="it" checked="checked"/>
+                    <label for="it">IT</label>
+                </p>
+
+            </div>
+
+            <div class="col l10 m10 card">
+
+                <div class="row">
+                    <br>
+                    <div class="col right">
+                        <div class="btn waves-effect waves-light blue darken-2" id="isearch-btn"><i class="fa fa-search"></i></div>
+                    </div>
+                    <div class="col right">
+                        <input type="text" name="search" id="isearch" placeholder="Search Meeting.."/>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col right">
+                        <p class="center next" id="inext">
+                            Next <i class="fa fa-angle-right"></i>
+                        </p>
+                    </div>
+
+                    <div class="col right">
+                        <p class="center next " id="iback">
+                            <i class="fa fa-angle-left"></i> Back
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="ievents_container">
+
+                    <ul id="ievents">
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="new" class="col s12">
+        <br>
+
+        <div class="container">
+
+            <div class="card-panel">
+
+                <h3 class="thin">New Event:</h3>
+
+                <br>
+
+                <div class="row container">
+
+                    <form class="col s12 m12 l12" action="#">
+
+                        <div class="row">
+                            <div class=" col m12 l12 ">
+                                <div class="row">
+                                    <div class="input-field col s12 m12 l12 ">
+                                        <i class="fa fa-pencil-square prefix"></i>
+                                        <input id="title" type="text" name="title"/>
+                                        <label for="title">Subject</label>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="input-field col s12 m12 l12">
+                                <i class="fa fa-sticky-note prefix"></i>
+                                <textarea id="message" class="materialize-textarea"></textarea>
+                                <label for="message">Description</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="fa fa-users prefix"></i>
+                                <select id="dept" multiple>
+                                    <option value="" disabled selected>Choose Departments</option>
+                                    <option value="1">Mechanical Engineering</option>
+                                    <option value="2">Electronics And Communication Engineering</option>
+                                    <option value="3">Electrical And Electronics Engineering</option>
+                                    <option value="4">Computer Science Engineering</option>
+                                    <option value="5">Information Technology</option>
+                                    <option value="6">Civil Engineering</option>
+                                    <option value="7">Mechatronics</option>
+                                </select>
+                                <label for="dept"></label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col m12 l12">
+                                <i class="fa fa-calendar prefix"></i>
+                                <label for="start_date">Start date</label>
+                                <input type="date" id="start_date" name="start_date" class="datepicker">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col m12 l12">
+                                <i class="fa fa-calendar prefix"></i>
+                                <label for="due_date">Due date</label>
+                                <input type="date" id="due_date" name="due_date" class="datepicker">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <br>
+
+                <h4 class="thin">Add members:</h4>
+
+                <div class="row">
+                    <div class="col l12 m12 dropdowncontainer">
+
+                        <div class="input-field col s12 m12 l12 ">
+                            <i class="fa fa-pencil-square prefix"></i>
+                            <input id="add" type="text" name="title" autocomplete="off"/>
+                            <label for="add">Search Member</label>
+                        </div>
+
+                        <div id="memlist_holder" style="position: absolute" class="hide">
+                            <ul id="memlist">
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col l12 m12">
+                        <h5 class="thin">Members List</h5>
+
+                        <div id="chipholder">
+                            <div class="tags" id="tags">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br>
+
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <button id="create"
+                                class=" center btn-large green white-text waves-effect waves-light">
+                            create
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!--<script type="text/javascript" src="jquery-3.1.1.js"></script>-->
+<!--<script type="text/javascript" src="materialize/js/materialize.min.js"></script>-->
+<!--<script type="text/javascript" src="ejs_production.js"></script>-->
+<!--<script type="text/javascript" src="js/home.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->

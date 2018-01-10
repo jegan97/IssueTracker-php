@@ -1,0 +1,52 @@
+#event_header{
+    background-color: #2C71EA;
+}
+
+.pad2{
+    padding: 2%;
+}
+
+.pad3{
+    padding: 3%;
+}
+
+#discussion_board{
+    max-height: 300px;
+    min-height: 300px;
+    min-width: 100%;
+    -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.14);
+    -moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.14);
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.14);
+}
+
+.table-of-contents a {
+    display: inline-block;
+    font-weight: 300;
+    color: #757575;
+}
+
+.table-of-contents a:hover {
+    color: #a8a8a8;
+    padding-left: 19px;
+    border-left: 1px solid #FF5722;
+}
+
+.table-of-contents a.active {
+    font-weight: 500;
+    padding-left: 18px;
+    border-left: 2px solid #FF5722;
+}
+
+#youraction .input-field label {
+    color: #7f7f7f;
+}
+
+#youraction .input-field input[type=text]:focus {
+    border-bottom: 1px solid #058517;
+    box-shadow: 0 1px 0 0 #058517;
+}
+
+#youraction .input-field input[type=text] {
+    border-bottom: 1px solid #7f7f7f;
+    box-shadow: 0 1px 0 0 #7f7f7f;
+}
